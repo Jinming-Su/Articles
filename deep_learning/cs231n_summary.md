@@ -16,4 +16,42 @@
    * 反向传播常用模式
       * add gate: 梯度分配器——两边梯度相等
       * max gate: 梯度路由——最大值梯度看做1，小值梯度看做0
-      
+   * 常用激活函数
+      * 在机器学习历史上，最早使用tanh函数
+      * 2012年，ReLU(修正线性单元) max(0,x)开始流行【当今的默认选择】
+      * 最近，leaky ReLU, Maxout ELU
+   * 计数神经网络层数是计算有权值的层数， 输入层并不计算在内
+   * http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html 在线二分类二层神经网络测试
+   * 加入适当的正则化参数，可以防止过拟合问题
+* Lecture 5 训练神经网络细节
+   * 使用CNN进行迁移学习
+      * 首先，在大数据集上进行预训练（如ImageNet），这个已经有许多人做好了，可以利用pre training好的模型，比如Caffe Model Zoo的。CNN当做一个特征提取器进行对待
+      * 其次，finetune自己的own data.如果数据量比较小，只需要训练分类器就可以了；如果数据量比较大，可以训练部分网络或者整个网络。
+   * 激活函数
+      * 上一节已经提到了很多的激活函数
+      * 历史上最常使用的激活函数是sigmoid函数，存在许多问题
+         * 1. [梯度弥散或者梯度消失]：sigmoid处理的神经元会成为一个饱和神经元（输出存在极限），输出要么为0，要么为1，导致反向传播中出现梯度趋向于0
+         * 2. sigmoid输出值不是中心对称的
+         * 3. exp()计算耗时
+      * tanh()为了改进sigmoid而提出来的，解决了中心对称问题
+      * ReLU在2012年被提出，成为一种默认使用的激活函数，在x>0区域解决了sigmoid的饱和问题，但是存在问题
+         * 1. 不是中心对称
+         * 2. x<0区域存在梯度弥散(dead ReLU)
+      * Leaky ReLU(max(ax, x))/ELU/Maxout   
+      ![1](https://cloud.githubusercontent.com/assets/16068384/23091672/523b698e-f5f6-11e6-86ae-9c63172255f0.png)
+   * 数据预处理
+      * 图像处理的数据预处理  
+      ![1](https://cloud.githubusercontent.com/assets/16068384/23093337/4a7eab82-f61b-11e6-8a03-7086c5fc6771.png)
+   * 权重初始化
+      * 根据对称性，初始化的时候如果weight不随机那训练出来的weight就都一毛一样了
+      * 随机化常采用的是N(0,0.01)，关于不同的激活函数，tanh和ReLU等初始化形式不同
+   * 批处理正则化（这种方法可以省去考虑权重初始值问题）
+   * 学习过程
+      * 交叉验证
+   * 超参数优化
+* Lecture 6 训练神经网络细节
+   * 参数更新
+      * SGD最慢
+      * momentum(v = mu * v - lr * dx; x += v)
+      * Nesterov Momentum
+   
