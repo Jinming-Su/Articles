@@ -53,5 +53,13 @@
    * 参数更新
       * SGD最慢
       * momentum(v = mu * v - lr * dx; x += v)
-      * Nesterov Momentum
-   
+      * Nesterov Momentum(先用更新后的位置的梯度)  
+      ![1](https://cloud.githubusercontent.com/assets/16068384/23098737/27c5b768-f691-11e6-9838-e3dc58261c70.png)
+      * adaGrad 梯度大的抑制一下步长, RMSProp优化adaGrad
+      * Adam： momentum + RMSProp[默认比较好的选择]
+   * regularization: dropout
+      * 前向传播的时候，随机把一些神经元置0，反向传播同样进行
+      * 作用：防止过拟合
+      * test的时候可以多次dropout采样求平均,但是效率比较低（Monte Carlo approximation）。另一种方法就是，不进行dropout（神经元失活），而是在输出过程中对输出值乘以一个概率P（P的值与神经网络的结构有关）
+### Lecture 7 
+      
