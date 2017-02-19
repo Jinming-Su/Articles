@@ -62,4 +62,14 @@
       * 作用：防止过拟合
       * test的时候可以多次dropout采样求平均,但是效率比较低（Monte Carlo approximation）。另一种方法就是，不进行dropout（神经元失活），而是在输出过程中对输出值乘以一个概率P（P的值与神经网络的结构有关）
 ### Lecture 7 
-      
+   * CNN例图  
+   ![1](https://cloud.githubusercontent.com/assets/16068384/23103275/c8a03ca0-f6f3-11e6-8d2e-060db225ad0f.png)
+   * CNN特点：局部感知；参数共享（全图同一个卷积核）；
+   * 卷积层 http://blog.csdn.net/real_myth/article/details/51824193
+      * 滤波器就是卷积核
+      * 步长stripe, 填充padding
+   * pool层 下采样（down sampling）
+      * conv层通常不会在空间上减小数据的size，而是保持数据的size,通常是在下采样层减小数据的尺寸
+      * 常见方式： max pooling（在一个滤波器范围内取最大值）; average pooling
+   * fc全连接层
+   * http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html 在线CNNjs训练
