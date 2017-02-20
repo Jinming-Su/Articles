@@ -104,3 +104,19 @@
    * t-SNE 一个数据可视化工具
    * deep dream
    * fool CNN
+* Lecture 10 RNN 
+   * LSTM(Long short Term Memory) http://www.jianshu.com/p/9dc9f41f0b29
+* Lecture 11 
+   * CNN训练过程中主要问题  
+   ![1](https://cloud.githubusercontent.com/assets/16068384/23129169/95ee4e04-f7bc-11e6-94b4-1ed3a1371ea0.png)
+   * Data Augmentation(目的是为了防止过拟合，dropout和dropconnect也可以达到这样的效果[训练时添加噪声，测试时弱化噪声])
+      * 1 最简单的方法是: 对图片横向翻转
+      * 2 随机截图（大小和位置随机).这种方法常采用的一种形式是左上、右上、左下、右下、中间截图5张，然后进行翻转，一共10张图
+      * 3 颜色变动：　常用的是PCA
+      * 4 任意的方法的组合：　移动、旋转、伸缩、放射等
+   * Transfer Learning(目的：有时候新的领域没有太多的数据用于训练CNN，可以把在其他领域训练好的CNN模型拿来使用)  
+   ![1](https://cloud.githubusercontent.com/assets/16068384/23131155/009353d8-f7c4-11e6-828d-36072b7b90f6.png)
+   * How to stack conv
+      * 把大的conv分解成多个小的conv表现更好, 可以减少很多参数,减少计算量.
+      * 注意： 把卷积层分解成不对称的卷积层现在用的还不多.
+   
