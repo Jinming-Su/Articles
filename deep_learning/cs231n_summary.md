@@ -61,7 +61,7 @@
       * 前向传播的时候，随机把一些神经元置0，反向传播同样进行
       * 作用：防止过拟合
       * test的时候可以多次dropout采样求平均,但是效率比较低（Monte Carlo approximation）。另一种方法就是，不进行dropout（神经元失活），而是在输出过程中对输出值乘以一个概率P（P的值与神经网络的结构有关）
-### Lecture 7 
+* Lecture 7 CNN细节
    * CNN例图  
    ![1](https://cloud.githubusercontent.com/assets/16068384/23103275/c8a03ca0-f6f3-11e6-8d2e-060db225ad0f.png)
    * CNN特点：局部感知；参数共享（全图同一个卷积核）；
@@ -73,3 +73,34 @@
       * 常见方式： max pooling（在一个滤波器范围内取最大值）; average pooling
    * fc全连接层
    * http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html 在线CNNjs训练
+* Lecture 8 迁移学习之物体定位和检测
+   * 定位一般是一个对象，而检测通常是多个对象
+   * 引用csdn上的一段话：  
+      * 1.对于分类而言，就是对于给定的图片把其划分到给定的几种类别中某一种。很显然，图像中只能存在一种给定类别中的对象。 
+      * 2.而定位就是找到对应的对象的位置区域，把它框选出来（即Bounding Box），这个选框除了位置信息（x，y）外还要包含其大小信息（w，h）。同样的，这里的图像只包含单个对象。 
+      * 3.检测就可以看作是定位的拓展，即给定一张图像或者视频帧，找出其中所有目标的位置，并给出每个目标的具体类别。与定位的不同就是图像中包含的对象数不确定。 
+      * 4.实例分割（Instance Segmentation），就是在检测的基础上，把每个对象的轮廓勾勒出来，随之而来的就是语义分割（Semantic segmentation）
+   * 定位分为不定类和定类定位两种
+      * 一种方法是使用全连接训练一个回归网络，进行定位
+      * 另一种方法通常采用一种sliding windows: overfeat的方法，最后进行聚类的方法进行合并, 高效的滑动窗口overfeat会把fc层转化为conv
+   * 检测(参考资料：http://blog.csdn.net/qq_30159351/article/details/52440058)
+      * Region Proposals： 选取比较可能包含图像的部分进行检测
+         * 比较出名的方法是：Selective Search： 首先将图片打散，然后按照超像素的原理（superpixel），根据人为定义的距离进行聚合。   
+         ![1](https://cloud.githubusercontent.com/assets/16068384/23113918/7e31572a-f776-11e6-86f1-1dbf45b4fb44.png)
+         * R-CNN
+            * 1 训练一个分类模型
+            * 2 微调模型用于检测问题
+            * 3 利用selective search算法在图像中提取2000个左右的region proposal, 将每个region proposal缩放（warp）成227x227的大小并输入到CNN，将CNN的fc7层的输出作为特征。 
+            * 4 将每个region proposal提取到的CNN特征输入到SVM进行分类。 
+            * 5 对于SVM分好类的region proposal做边框回归（bounding-box regression)，边框回归是对region proposal进行纠正的线性回归算法。
+            * 存在问题: 1.运行速度慢 2.训练分为多个阶段，步骤繁琐 3.支持向量机和回归是事后训练的：CNN特征没有根据支持向量机和回归来更新 
+          * fast-RCNN  
+          ![1](https://cloud.githubusercontent.com/assets/16068384/23114655/49e54f76-f77b-11e6-80b5-bc40b1f2cff5.png)
+          * faster-RCNN
+            * 采用RPN(Region Proposal Networks).RPN的核心思想是使用卷积神经网络直接产生region proposal，使用的方法本质上就是滑动窗口。RPN的设计比较巧妙，RPN只需在最后的卷积层上滑动一遍，因为anchor机制和边框回归可以得到多尺度多长宽比的region proposal。 
+      * 目前，最好的水平是ResNet101 + R-CNN + some extras
+      * YOLO
+* Lecture 9 CNN可视化
+   * t-SNE 一个数据可视化工具
+   * deep dream
+   * fool CNN
