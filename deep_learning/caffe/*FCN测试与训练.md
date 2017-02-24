@@ -11,6 +11,7 @@
 * python2.7.6
 * 项目地址： https://github.com/su526664687/caffe/tree/master/examples/fcn
 * fcn： https://github.com/shelhamer/fcn.berkeleyvision.org
+* voc2012: (镜像地址)https://pjreddie.com/projects/pascal-voc-dataset-mirror/
 
 ### 先测试
 * 测试过程还好，不是特别的麻烦，参考文章http://www.cnblogs.com/xuanxufeng/p/6240659.html ,（这个地方才看到了infer.py） 由于主要使用matlab工具，特点是调试比较方便(python能不能方便地进行调试我现在还不知道，不过想到这里我有想玩eclipse写python了).
