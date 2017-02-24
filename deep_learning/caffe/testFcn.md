@@ -1,3 +1,5 @@
+
+```
 clear
 clc
 
@@ -24,3 +26,4 @@ net.forward_prefilled();
 
 [out I] = max(net.blobs('score').get_data(),[],3);
 imshow(permute(out, [2, 1, 3])/256);
+```
