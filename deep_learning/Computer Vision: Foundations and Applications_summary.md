@@ -1,3 +1,5 @@
+> This is the outline for stanford cs131
+
 ### introduction
 
 ### Pixels, Features, and Cameras
