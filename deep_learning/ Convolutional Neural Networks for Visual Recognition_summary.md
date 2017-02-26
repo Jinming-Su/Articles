@@ -1,3 +1,5 @@
+> This is the notes for stanford cs 231n
+
 ### cs231n notes
 * lecture 1 介绍计算机视觉
     * 生物视觉的起源从5.4亿年前的物种大爆发开始--眼睛的出现是物种多样性迅速增多的一个重要因素.
