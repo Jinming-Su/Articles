@@ -1,5 +1,5 @@
 ### 参考资料
-* matcaffe安装到使用.http://caffecn.cn/?/page/tutorial(http://blog.csdn.net/ws_20100/article/details/50525879
+* matcaffe安装到使用.http://caffecn.cn/?/page/tutorial (http://blog.csdn.net/ws_20100/article/details/50525879)
 * http://blog.csdn.net/gybheroin/article/details/54177436
 
 ### 环境
