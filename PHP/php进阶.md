@@ -1,6 +1,6 @@
-#PHP进阶
+# PHP进阶
 
-##多维数组
+## 多维数组
 实例
     
     ```
@@ -53,7 +53,7 @@
     )   
     ```
 
-##日期date()函数
+## 日期date()函数
 * date() 函数用于格式化时间/日期
 * 语法
     `string date ( string $format [, int $timestamp ] )`
@@ -65,12 +65,12 @@
     ?>
     ```
 
-##包含文件 include 和 require 语句
+## 包含文件 include 和 require 语句
 区别
 * require 生成一个致命错误（E_COMPILE_ERROR），在错误发生后脚本会停止执行.
 * include 生成一个警告（E_WARNING），在错误发生后脚本会继续执行.
 
-##文件处理
+## 文件处理
 * 打开文件
     `<?php $file=fopen("welcome.txt","r");?>`
 * 关闭文件
@@ -90,7 +90,7 @@
     ```
 * 逐字符读取文件fgetc()
 
-##文件上传
+## 文件上传
 * 创建上传脚本(在次之前需要有一个提交到此页的带有file的表单)
     
     ```
@@ -123,7 +123,7 @@
     }
     ```
 
-##Cookie
+## Cookie
 * 创建cookie语法
     `setcookie(name, value, expire, path, domain);`
     * name（ Cookie名）可以通过$_COOKIE[‘name’] 进行访问
@@ -135,7 +135,7 @@
 * 删除cookie
     `setcookie('test','', time()-1); `
 
-##Session
+## Session
 * 开始 PHP Session
     `<?php session_start(); ?>`
     * session_start() 函数必须位于 <html> 标签之前
@@ -145,12 +145,12 @@
     * unset() 函数用于释放指定的 session 变量 `unset($_SESSION['views']);`
     *  session_destroy() 函数彻底销毁 session `session_destroy();`
 
-##E-Mail
+## E-Mail
 * 语法
     `mail(to,subject,message,headers,parameters`
 * 具体测试参照:https://github.com/su526664687/Articles/blob/master/2016/11/17.1.phpmailer.md
 
-##错误处理
+## 错误处理
 * die()
     
     ```
@@ -205,7 +205,7 @@
         Error: [512] 变量值必须小于等于 1
         脚本结束
         ```
-##异常处理
-##过滤器
+## 异常处理
+## 过滤器
 //这部分希望在以后用到的时候进行补充
-##JSON
+## JSON

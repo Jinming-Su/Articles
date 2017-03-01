@@ -1,7 +1,7 @@
 # GO语言安装及vim-go的配置  
 > 最近void-001在写NEUOJ_judge的后端测评机，而我本人最近也比较空闲，于是就想跟着VOID-001，看着他的代码，进行一下GO的学习。  
 
-###GO的安装  
+### GO的安装  
 * 如果对自己的梯子比较有信心可以在官网下载GO的编译器，如果没信心的话，可以使用国内的golang中国http://www.golangtc.com/download（不要担心版本落后,版本是同步的），下载go1.7.3.linux-amd64.tar.gz  
 * 下载好之后，先进行解压，然后就可以把的解压后文件放在自己喜欢的位置。之后进行配置：  
   
@@ -12,7 +12,7 @@
   ```
 * 到此，安装结束。使用 `go version`验证安装成功。
 
-###GO开发环境的使用
+### GO开发环境的使用
 * 很多人问GO语言使用什么开发环境，个人认为还是使用vim比较好，其实，现在主流的GO的开发环境还没有一个主流的IDE，都是需要在别的IDE上进行GO插件的配置，与其在一个几百兆的环境上开发，倒不如使用vim  
 * vim 配置，Vim-go是当前使用最为广泛的用于搭建Golang开发环境的vim插件，于是我们采用vim-go插件。vim-go利 用开源Vim插件管理器安装，gmarik/Vundle.vim是目前被推荐次数更多的Vim插件管理器。可以参照官方介绍 https://github.com/VundleVim/Vundle.vim 
   * 下载。`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`

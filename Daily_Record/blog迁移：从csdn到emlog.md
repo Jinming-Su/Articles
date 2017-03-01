@@ -1,4 +1,4 @@
-##blog迁移：从csdn到emlog
+## blog迁移：从csdn到emlog
 ---
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;很早就决定重新构建自己的博客，可是一直没有机会，趁着这几天还比较清闲，重新搭建了一个新的博客。  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;之前一直使用的是csdn http://blog.csdn.net/u014451076. 从2014年5月到2016年10月，也有两年多的时间了。在使用过程中，一直让我诟病的主要是它的两个功能的缺陷：（１）目录功能实在是不好用，每次新增加一个目录都需要多次调整才能到达预期的位置（２）markdown编辑器语法并不标准。  

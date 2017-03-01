@@ -1,9 +1,9 @@
-#使用phpmailer发邮件
+# 使用phpmailer发邮件
 ---
-##准备
+## 准备
 * 需要在github上的phpmailer项目中下载class.phpmailer.php和class.smtp.php.
 
-##实例
+## 实例
 
   ```
   <?PHP
