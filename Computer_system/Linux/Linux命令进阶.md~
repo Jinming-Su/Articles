@@ -1,14 +1,3 @@
----
-title: Linux命令进阶
-date: 2017-03-02 00:00:01
-categories:
-- Computer_system
-- Linux
-tags:
-- Linux
-description: ...
----
-
 ### 目录
 * <a href="#conf_file" target="_self">配置文件</a>
 * <a href="#user" target="_self">系统管理员对用户和用户组管理文件</a>

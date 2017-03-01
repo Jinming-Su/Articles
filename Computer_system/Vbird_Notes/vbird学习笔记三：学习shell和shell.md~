@@ -1,6 +1,16 @@
+---
+title: vbird学习笔记三：学习shell和shell
+date: 2017-03-02 00:01:01
+categories:
+- Computer_system
+- Vbird_Notes
+tags:
+- Linux
+description: ...
+---
+
 > 这一部分主要是学习和使用shell，由于之前已经写过一些shell，这一部分就写的比较少，本部分要注重实践哦.
 
-***
 * 认识shell
     * 查看本机安装的shell
     

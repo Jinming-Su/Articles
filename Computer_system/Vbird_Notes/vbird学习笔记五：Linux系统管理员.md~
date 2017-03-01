@@ -1,16 +1,5 @@
----
-title: vbird学习笔记五：Linux系统管理员
-date: 2017-03-02 00:01:01
-categories:
-- Computer_system
-- Vbird_Notes
-tags:
-- Linux
-description: 《鸟哥的Linux私房菜》学习笔记
----
-
 # Linux 系统管理员
-
+***
 ### Unit 20 启动流程、模块管理与Loader
 * 启动流程
     * 加载BIOS的硬件信息与进行自我测试，并一依据设置取得第一个可启动的设备(如硬盘)

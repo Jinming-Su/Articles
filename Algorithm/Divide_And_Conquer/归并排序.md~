@@ -1,3 +1,4 @@
+---
 title: 归并排序
 date: 
 categories:
@@ -6,6 +7,7 @@ categories:
 tags:
 - sort
 description: ...
+---
 
 ### 问题
     * 实现归并排序

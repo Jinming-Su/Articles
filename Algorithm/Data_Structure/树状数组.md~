@@ -1,4 +1,14 @@
-***
+---
+title: 树状数组
+date: 
+categories:
+- Algorithm
+- Data_Structure
+tags:
+- binary_index_tree
+description: ...
+---
+
 > 作用： 解决部分线段树的问题：点更新和区间求和
 
 ## 基本知识
