@@ -1,5 +1,5 @@
 ---
-title: ParseNet: Looking wider to see better翻译
+title: ParseNet:Looking wider to see better翻译
 date: 2017-03-04 12:51:00
 categories:
 - Deep_Learning
