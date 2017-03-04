@@ -1,5 +1,5 @@
 ---
-title: computer Vision: Foundations and Applications_summary
+title: computer Vision:Foundations and Applications_summary
 date: 2017-03-04 12:51:00
 categories:
 - Deep_Learning
