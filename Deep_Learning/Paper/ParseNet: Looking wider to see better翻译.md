@@ -25,5 +25,5 @@ semantic segmentation，在过去十年中被广泛研究，它融合了image se
 <br/>
 文章的剩余部分如下组织，Section 2 我们回顾了相关工作.在Section 3，我们对提出的方法进行了描述，Section　4是我们进行了广泛的实验验证.Section 5我们总结了工作，并描述了未来的工作方向.
 
-### Conclusion
+#### Conclusion
 在这个工作中，我们展示了ParseNet，一个简单的FCN架构，它允许直接把global context用于semantic segmentation课题.我们明确表明了，依托FCN网最大的感受野不提供足够的global context，最大的经验感受野是不足以捕捉global context–建模global context被需要.在PASCAL VOC2012测试机上，ParseNet的分割结果是在DeepLab-LargeFOV-CRF的标准偏差中，这暗示添加global feature和带有图模型的FCN后处理预测有相似的效果.开发和分析这个方法的时候，我们提出了许多结构选择分析，讨论了最好的训练实践，说明了正则化和在网络中多层组合特征时学习权重的重要性.我们的训练显著提高了我们用的baseline的性能.我们在三个benchmark数据集展示的结果，是目前在SiftFlow和PASCAL-Context的最好的水平，在PASCAL VOC2012上接近最好的水平.最低朴素的和简单的训练，我们发现结果很令人鼓舞.在我们未来的工作，我们正探究把我们的网络与结构化的训练/接口结合.
