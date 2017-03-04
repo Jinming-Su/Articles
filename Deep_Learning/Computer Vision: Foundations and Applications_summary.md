@@ -1,3 +1,13 @@
+---
+title: computer Vision: Foundations and Applications_summary
+date: 2017-03-04 12:51:00
+categories:
+- Deep_Learning
+tags:
+- cs131
+description: This is the notes for stanford cs 131
+---
+
 > This is the outline for stanford cs131
 
 ### introduction

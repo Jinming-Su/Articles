@@ -1,3 +1,14 @@
+---
+title: Convolutional Neural Networks for Visual Recognition_summary
+date: 2017-03-04 12:51:00
+categories:
+- Deep_Learning
+tags:
+- cs231n
+description: This is the notes for stanford cs 231n
+---
+
+
 > This is the notes for stanford cs 231n
 
 ### cs231n notes
