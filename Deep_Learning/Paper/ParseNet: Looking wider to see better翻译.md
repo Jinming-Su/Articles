@@ -6,7 +6,7 @@ categories:
 - Paper
 tags:
 - ParseNet
-description: 《ParseNet: Looking wider to see better》 ICLR 2016 submission
+description: 《ParseNet:Looking wider to see better》 ICLR 2016 submission
 ---
 
 ### ParseNet: Looking wider to see better翻译
