@@ -1,3 +1,15 @@
+---
+title: matlab: 使用工具包运行KNN算法
+date: 2017-03-18 00:00:01
+categories:
+- Machine_Learning
+- Machine_Learning_Practice
+tags:
+- matlab
+- knn
+description: ...
+---
+
 > k-NearestNeighbor,k近邻算法
 
 ### 算法流程
