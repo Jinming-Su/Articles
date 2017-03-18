@@ -47,7 +47,9 @@ description: ...
 决策树的学习关键是最有划分属性的选择.一般而言，随着划分过程的不断进行，我们希望决策树的分支结果所包含的样本尽可能属于同一类别，即结点“纯度”越来越高.  
 几种主要的划分方法: **信息增益(ID3), 增益率(C4.5), 基尼系数(CART)**
 
-### python调用工具包实现ID3
+### python调用工具包实现ID3  
+[决策树算法测自制数据.zip](https://github.com/su526664687/PictureLibrary/files/852269/default.zip)
+
 ``` python
 from sklearn.feature_extraction import DictVectorizer
 import csv
