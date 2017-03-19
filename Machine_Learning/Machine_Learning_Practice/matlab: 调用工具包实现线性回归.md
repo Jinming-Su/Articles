@@ -1,3 +1,15 @@
+---
+title: matlab:调用工具包实现线性回归
+date: 2017-03-19 00:00:01
+categories:
+- Machine_Learning
+- Machine_Learning_Practice
+tags:
+- matlab
+- 线性回归
+description: ...
+---
+
 ### 线性回归
 * 使用matlab自带fit函数实现代码
   
