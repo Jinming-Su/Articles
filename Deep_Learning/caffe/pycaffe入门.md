@@ -1,3 +1,14 @@
+---
+title: pycaffe入门
+date: 2017-03-22 00:00:01
+categories:
+- Deep_Learning
+- caffe
+tags:
+- pycaffe
+description: ...
+---
+
 ### 参考
 * Caffe for Python 官方教程(翻译)  http://blog.csdn.net/jnulzl/article/details/52077915
 * Caffe均值文件mean.binaryproto转mean.npy http://blog.csdn.net/hyman_yx/article/details/51732656
