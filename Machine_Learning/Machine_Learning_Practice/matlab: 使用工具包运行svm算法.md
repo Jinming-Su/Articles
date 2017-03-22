@@ -1,3 +1,14 @@
+---
+title: matlab:使用工具包运行svm算法
+date: 2017-03-22 00:00:01
+categories:
+- Machine_Learning
+- Machine_Learning_Practice
+tags:
+- matlab
+description: ...
+---
+
 > support vector machine
 
 ### matlab自带的svm
