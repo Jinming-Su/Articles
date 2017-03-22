@@ -3,7 +3,7 @@ title: python:实现logistic_regression
 date: 2017-03-19 00:00:01
 categories:
 - Machine_Learning
-- Machine_Learning_Pracitce
+- Machine_Learning_Practice
 tags:
 - logistic_regression
 description: ...
