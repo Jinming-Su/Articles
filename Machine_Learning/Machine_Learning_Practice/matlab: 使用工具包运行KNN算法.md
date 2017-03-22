@@ -1,5 +1,5 @@
 ---
-title: matlab: 使用工具包运行KNN算法
+title: matlab:使用工具包运行KNN算法
 date: 2017-03-18 00:00:01
 categories:
 - Machine_Learning
