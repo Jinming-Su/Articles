@@ -31,3 +31,6 @@ description: ...
   * 你英语可以不好，但是一定要好好学，努力学。如果你开始搞学术了，尤其是计算机，你还认为英语不重要，你的一篇论文中，几乎所有的引用都是中文文献，那么你完蛋了，你的视野可能是几年前的技术。
 * 4. 写论文  
   * 主要还是你需要有好的idea，如果你有了好的idea。然后快速的去实验，即使并不是很完善，快速去写论文，然后不厌其烦的改，之后发论文。只要你的idea最够好，可以弥补一切问题。
+
+### Paper List
+* 【DeconvNet】Learning Deconvolution Network for Semantic Segmentation
