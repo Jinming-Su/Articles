@@ -8,7 +8,7 @@ tags:
 - deconvolution
 description: DeconvNet
 ---
-### 总体介绍
+### 基本情况
 * time: 2015年ICCV的一篇文章
 * domain: semantic segmentation
 
