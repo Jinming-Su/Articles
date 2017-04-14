@@ -52,5 +52,5 @@ description: Batch Normalization
 
 ### 源代码
 * 作者在文章中说应该把BN放在激活函数之前，这是因为Wx+b具有更加一致和非稀疏的分布。但是也有人做实验表明放在激活函数后面效果更好。这是实验链接，里面有很多有意思的对比实验：https://github.com/ducha-aiki/caffenet-benchmark
-* 在caffe的官方版本中把bn算法分成了两个层，一个是batch_norm_layer,另一个是scale_layer.
+* 在caffe的官方版本中把bn算法分成了两个层，一个是batch_norm_layer,另一个是scale_layer.使用实例可参考https://github.com/KaimingHe/deep-residual-networks/blob/master/prototxt/ResNet-50-deploy.prototxt. 同时，在我的项目CaffeAnalysis中对两个layer进行了分析.
 * caffe的bn分支对于bn的实现: https://github.com/ducha-aiki/caffe/blob/bn/src/caffe/layers/bn_layer.cpp
