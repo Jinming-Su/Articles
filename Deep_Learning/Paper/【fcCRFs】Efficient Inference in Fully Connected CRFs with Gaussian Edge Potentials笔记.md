@@ -39,3 +39,4 @@ description: fully connected conditional random fields
 
 ### 源代码
 * https://github.com/lucasb-eyer/pydensecrf
+* https://github.com/johannesu/meanfield-matlab.git 
