@@ -10,7 +10,7 @@ description: fully connected conditional random fields
 ---
 
 ### 基本情况
-* time: CVPR2012
+* time: 2011NIPS, CVPR2012
 * domian: segmentation
 
 ### Abstract
