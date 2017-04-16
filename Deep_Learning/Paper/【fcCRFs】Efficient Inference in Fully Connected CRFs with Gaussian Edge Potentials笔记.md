@@ -40,3 +40,5 @@ description: fully connected conditional random fields
 ### 源代码
 * https://github.com/lucasb-eyer/pydensecrf
 * https://github.com/johannesu/meanfield-matlab.git 
+* 可以参考的文章: http://www.jianshu.com/p/434b3e22a47e
+* 我之前也写过一篇CRF入门 https://github.com/su526664687/Articles/blob/master/Deep_Learning/CRF%E5%85%A5%E9%97%A8.md
