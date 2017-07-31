@@ -1,3 +1,9 @@
+# 包结构
+* controller
+* entity
+* repository
+* service
+
 # 配置文件pom.xml
 ### parent
 spring-boot-starter-parent是一个parent pom，目的是更加容易的管理版本依赖和使用默认配置，通常在spring boot项目中会先继承一个parent，通常会继承spring-boot-starter-parent  
@@ -10,9 +16,13 @@ starter是可以包含到应用中的一个方便的依赖关系描述符集合�
 
 # 注解大全
 这里需要一部分Spring的知识
-* @SpringBootApplication指定本程序是一个spring boot应用程序
-* @RestController等价于@Controller+@RequestBody
-* @GetMapping，将http请求映射到指定的方法，类似的还有Post/Put/Delete/RequestMapping
+* `@SpringBootApplication`指定本程序是一个spring boot应用程序
+* `@Service`用于标注业务层组件（注入Dao），`@Controller`用于标注控制层组件（注入Service），`@Repository`用于标注数据访问层组件，即DAO，`@Component`泛指组件，当不好归类时使用这个注解进行标注
+* `@RestController`等价于`@Controller+@RequestBody`
+* `@GetMapping`，将http请求映射到指定的方法，类似的还有Post/Put/Delete/RequestMapping
+* `@Value("${xxx}")` 可以简单地把配置文件中的属性值注入
+* `@ConfigurationProperties(prefix="xxx"` 将配置文件中的属性注入到一个配置对象中
+* `@Valid`可以校验实体类属性
 
 # spring boot 返回json
 spring boot 默认使用的json解析框架是jackson，直接将返回的对象解析为json返回
@@ -59,10 +69,10 @@ Spring Data是一个开源框架，而Spring Data JPA是框架中的一个模块
 // application.yml
 spring:
   datasource:
+    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/dbgirl
     username: root
     password:
-    driver-class-name: com.mysql.jdbc.Driver
   jpa:
     database: MYSQL
     hibernate:
@@ -73,7 +83,8 @@ spring:
 ### 使用
 * 创建实体类:使用`@Entity`进行实体类的持久化操作，当JPA检测到我们的实体类当中有`@Entity`注解时，会在数据库中生成对应的表结构信息，使用`@Id`指定主键，使用`@GeneratedValue(strategy = GenerationType.AUTO)`指定主键的生成策略  
 * `@Service`进行Service的注解，`@Resource`和`@Autowired`都可以进行注入Bean，`@Autowired`是spring提供的方法，`@Resource`是java提供的方法
-* `@Transactional`进行事务的绑定
+* `@Transactional`进行事务的绑定，一般在`@Service`中使用
+* CrudRepository接口继承自Repository接口，PagingAndSortingRepository接口继承CrudRepository，JpaRepository接口继承自PagingAndSortingRepository
 
 # 全局异常捕获
 1. 新建一个Class用于处理异常
@@ -98,3 +109,37 @@ spring.thymeleaf.cache: false
 3. 在resources/templates下建立.html
 4. 在controller中指定.html即可
 
+# 表单验证
+http://blog.csdn.net/a60782885/article/details/68488411 
+
+# AOP
+1. 导入依赖
+```
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-aop</artifactId>
+</dependency>
+```
+2. 创建类
+使用`@Aspect``@Component`注解类
+3. 具体用法参考http://www.cnblogs.com/lic309/p/4079194.html
+
+# 日志
+```
+protected static Logger logger=LoggerFactory.getLogger(HelloController.class);  
+logger.info('xxx');
+```
+
+# 单元测试
+主要测试Service和Controller.
+1. 添加依赖
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+2. 在测试类头添加注解`@RunWith(SpringRunner.class)`和`@SpringBootTest`
+3. 在测试的方法上添加`@Test`注解  
+4. 使用MockMvc测试API
